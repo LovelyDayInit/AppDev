@@ -3,18 +3,18 @@ import { View, Text } from 'react-native';
 
 const ThirdScreen = () => {
     return (
-        <View style={{ flex: 1, backgroundColor: 'mistyrose' }}>
+        <View style={{ flex: 1, flexDirection: 'row', backgroundColor: 'mistyrose' }}>
             <View style={{ flex: 1, backgroundColor: 'red' }}>
                 <Text style={{ color: 'white' }}>
                     Pikachu
                 </Text>
             </View>
-            <View style={{flex: 2, backgroundColor: 'orange'}}>
+            <View style={{flex: 1, backgroundColor: 'orange'}}>
                 <Text>
                     Flareon
                 </Text>
             </View>
-            <View style={{flex: 3, backgroundColor: 'yellow'}}>
+            <View style={{flex: 1, backgroundColor: 'yellow'}}>
                 <Text>
                     Rapidash
                 </Text>
@@ -23,4 +23,6 @@ const ThirdScreen = () => {
     )
 };
 
-export default ThirdScreen; 
+
+
+export default AddImage;
