@@ -38,6 +38,21 @@ const SecondScreen = () => {
                 </Text>
             </View>
 
+            <TouchableOpacity
+                style={{
+                    backgroundColor: 'white',
+                    padding: 8,
+                    margin: 8,
+                    borderRadius: 50,
+                    borderWidth: 2,
+                }}
+                onPress={() => openAlert()}>
+                <Text style={{ color: 'lightcoral' }}>
+                    Mobile Legends Button
+                </Text>
+
+            </TouchableOpacity>
+
             <View style={{
                 backgroundColor: 'cornflowerblue',
                 margin: 14,
@@ -59,7 +74,23 @@ const SecondScreen = () => {
                     is a multiplayer battle royale game in which players
                     drop onto an island and fight to be the last one left standing.
                 </Text>
+
             </View>
+
+            <TouchableOpacity
+                style={{
+                    backgroundColor: 'white',
+                    padding: 8,
+                    margin: 8,
+                    borderRadius: 50,
+                    borderWidth: 2,
+                }}
+                onPress={() => openAlert()}>
+                <Text style={{ color: 'lightcoral' }}>
+                    PUBG Button
+                </Text>
+
+            </TouchableOpacity>
         </View>
     )
 };
