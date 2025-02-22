@@ -35,18 +35,22 @@ const FourthScreen = () => {
                     keyboardType="default"
                 />
 
-                <Text style={{ marginTop: 12, marginBottom: 12 }}>
-                    Number
-                </Text>
-                <TextInput
-                    style={{
-                        padding: 10, borderWidth: 1,
-                        height: 200, fontSize: 16
-                    }}
+                <InputComponent
+                    title="Number"
+                    height={200}
                     placeholder="Phone Number"
                     multiline={true}
                     keyboardType="phone-pad"
                 />
+
+                <InputComponent
+                    title="Location"
+                    height={200}
+                    placeholder="Location"
+                    multiline={true}
+                    keyboardType="default"
+                />
+
             </ScrollView>
         </View >
     )
