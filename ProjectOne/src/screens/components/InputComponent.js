@@ -18,7 +18,7 @@ export const InputComponent = (props) => {
                     height: height,
                     fontSize: 16
                 }}
-                {...props}
+                {...props} // This is a rest operator
             />
         </View>
     )

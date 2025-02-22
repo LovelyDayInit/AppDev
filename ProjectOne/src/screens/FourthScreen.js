@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, ImageBackground, TextInput, ScrollView } from 'react-native';
+import { InputComponent } from './components/InputComponent';
 
 const FourthScreen = () => {
     return (
@@ -26,14 +27,9 @@ const FourthScreen = () => {
                     </Text>
                 </ImageBackground>
 
-                <Text style={{ marginTop: 12, marginBottom: 12 }}>
-                    Description
-                </Text>
-                <TextInput
-                    style={{
-                        padding: 10, borderWidth: 1,
-                        height: 200, fontSize: 16
-                    }}
+                <InputComponent
+                    title="Description"
+                    height={200}
                     placeholder="About the place"
                     multiline={true}
                     keyboardType="default"
