@@ -4,6 +4,9 @@ import FirstScreen from './src/screens/FirstScreen';
 import SecondScreen from './src/screens/SecondScreen';
 import ThirdScreen from './src/screens/ThirdScreen';
 import ImageScreen from './src/screens/ImageScreen';
+import FourthScreen from './src/screens/FourthScreen';
+
+
 
 const App = () => {
   return (
@@ -11,8 +14,9 @@ const App = () => {
 
       {/* <FirstScreen /> */}
       {/* <SecondScreen /> */}
-      {/* { <ThirdScreen /> } */}
-      { <ImageScreen />}
+      {/*<ThirdScreen /> */}
+      {/* <ImageScreen />*/}
+      { <FourthScreen />}
 
     </SafeAreaProvider>
   )

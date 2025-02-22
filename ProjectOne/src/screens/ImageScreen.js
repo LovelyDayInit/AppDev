@@ -2,9 +2,10 @@ import { View, Text, Image, ScrollView } from 'react-native';
 
 const ImageScreen = () => {
     return (
+        
         <View style={{ flexDirection: 'row' }}>
             <ScrollView horizontal={true}>
-                <View style={{ margin: 8, padding: 8, flexDirection: 'row'}}>
+                <View style={{ margin: 8, padding: 8, flexDirection: 'row' }}>
                     <Image
                         style={{
                             width: 150,
