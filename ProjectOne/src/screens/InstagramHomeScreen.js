@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import { Icon } from 'react-native-elements';
+import { Feed } from './components/InstagramComponent';
 
 const InstagramHomeScreen = () => {
     return (
@@ -25,11 +26,21 @@ const InstagramHomeScreen = () => {
                     </View>
 
                     <View style={{ margin: 8 }}>
-                        <Icon name='airplane' type='ionicon' size={26} />
+                        <Icon name='heart-o' type='font-awesome' size={26} />
                     </View>
-                </View> 
+                    <View style={{ margin: 8 }}>
+                        <Icon name='paper-plane-outline' type='ionicon' size={26} />
+                    </View>
+                </View>
             </View>
-        </View >
+
+            <ScrollView>
+                <Feed 
+                    profile={require('../../assets/images/profilePicture1.png')}
+                    username="catherine"    
+                />
+            </ScrollView>
+        </View>
     )
 };
 
