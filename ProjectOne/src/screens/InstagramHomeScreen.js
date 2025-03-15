@@ -35,9 +35,34 @@ const InstagramHomeScreen = () => {
             </View>
 
             <ScrollView>
-                <Feed 
+                <Feed
                     profile={require('../../assets/images/profilePicture1.png')}
-                    username="catherine"    
+                    username="catherine"
+                    post={{ uri: 'https://wallpaperaccess.com/full/496881.jpg' }}
+                />
+
+                <Feed
+                    profile={require('../../assets/images/profilePicture2.png')}
+                    username="oce"
+                    post={{ uri: 'https://images5.alphacoders.com/316/316297.jpg' }}
+                />
+
+                <Feed
+                    profile={require('../../assets/images/profilePicture3.png')}
+                    username="instagramuser"
+                    post={{ uri: 'https://wallpaperaccess.com/full/1403923.jpg' }}
+                />
+
+                <Feed
+                    profile={require('../../assets/images/profilePicture4.png')}
+                    username="heathcliff"
+                    post={require('../../assets/images/post.jpg')}
+                />
+
+                <Feed
+                    profile={require('../../assets/images/profilePicture5.png')}
+                    username="idk"
+                    post={{ uri: 'https://i.ibb.co/bLz74hj/psyduck.png' }}
                 />
             </ScrollView>
         </View>

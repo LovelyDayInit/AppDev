@@ -41,6 +41,10 @@ export const Feed = ({ profile, username, post }) => {
                 </View>
             </View>
             {/* part 2 */}
+            <Image
+                source={post}
+                style={{ width: '100%', height: 800 }}
+            />
             {/* part 3 */}
         </View>
     )
