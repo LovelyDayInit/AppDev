@@ -1,7 +1,30 @@
-import React from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
+import { countryList, objectImageList, objectNameList } from '../../data/Data';
 
 const GuessTheCountryScreen = () => {
+    const [answer, setAnswer] = useState('');
+    const [index, setIndex] = useState();
+    const [result, setResult] = useState('');
+
+    const randomIndex = () => {
+        const pickRandomIndex = Math.floor(Math.random() * countryList.length);
+        setIndex(pickRandomIndex);
+    }
+
+    const checkAnswer = () => {
+        if (answer.toLowerCase() === countryList[index]) {
+            setResult('true');
+        } else {
+            setResult('false');
+        }
+        randomIndex();
+    }
+
+    useEffect(() => {
+        randomIndex();
+    }, []); // <-- Added dependency array to run only once on mount
+
     return (
         <View style={{
             flex: 1,
@@ -22,7 +45,7 @@ const GuessTheCountryScreen = () => {
                     height: 250,
                     borderRadius: 10
                 }}
-                source={{ uri: 'https://wallpaperaccess.com/full/180136.jpg' }}
+                source={{ uri: objectImageList[index] }}
             />
             <View style={{
                 margin: 8,
@@ -31,7 +54,7 @@ const GuessTheCountryScreen = () => {
                 borderWidth: 1
             }}>
                 <Text style={{ fontSize: 18 }}>
-                    Big Ben
+                    {objectNameList[index]}
                 </Text>
             </View>
             <View style={{
@@ -44,23 +67,29 @@ const GuessTheCountryScreen = () => {
                         width: '50%',
                     }}
                     placeholder="Write your answer"
+                    keyboardType='default'
+                    onChangeText={(text) => setAnswer(text)}
                 />
-                <TouchableOpacity style={{
-                    borderWidth: 1,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: 10,
-                    padding: 8,
-                    marginLeft: 8,
-                    marginBottom: 8,
-                    marginTop: 8,
-                    backgroundColor: 'skyblue'
-                }}>
+                <TouchableOpacity
+                    style={{
+                        borderWidth: 1,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: 10,
+                        padding: 8,
+                        marginLeft: 8,
+                        marginBottom: 8,
+                        marginTop: 8,
+                        backgroundColor: 'skyblue'
+                    }}
+                    onPress={checkAnswer} // <-- Corrected onPress handler
+                >
                     <Text style={{ fontSize: 18 }}>
                         Submit
                     </Text>
                 </TouchableOpacity>
             </View>
+            <Text>{result}</Text> {/* Display the result */}
         </View>
     )
 };
