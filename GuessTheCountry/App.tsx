@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import HomeScreen from './src/screens/HomeScreen';
+import GuessTheCountryScreen from './src/screens/GuessTheCountry';
 
 
 
@@ -8,7 +9,8 @@ const App = () => {
   return (
     <SafeAreaProvider>
 
-      <HomeScreen />
+      {/* <HomeScreen /> */}
+      <GuessTheCountryScreen />
 
     </SafeAreaProvider>
   )

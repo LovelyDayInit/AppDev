@@ -5,16 +5,16 @@ const HomeScreen = () => {
     const [number, setNumber] = useState(0);
 
     const decreaseNumber = () => {
-        decreaseNumber(number - 1);
+        setNumber(number - 1);
     };
 
     const increaseNumber = () => {
-        increaseNumber(number + 1);
+        setNumber(number + 1);
     };
 
     useEffect(() => {
         setNumber(10);
-        Alert('You can increase or decrease the number!')
+        alert('You can increase or decrease the number!') 
     }, []); 
 
     return (

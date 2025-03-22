@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-    View, Text, Image,
-    TextInput, TouchableOpacity
-} from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 
 const GuessTheCountryScreen = () => {
     return (
