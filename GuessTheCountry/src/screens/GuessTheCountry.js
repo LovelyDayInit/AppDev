@@ -18,7 +18,10 @@ const GuessTheCountryScreen = () => {
         } else {
             setResult('false');
         }
-        randomIndex();
+        setTimeout(() => {
+            setResult('');
+            randomIndex();
+        }, 1500);
     }
 
     useEffect(() => {
