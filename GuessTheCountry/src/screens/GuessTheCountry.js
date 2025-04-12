@@ -94,7 +94,7 @@ const GuessTheCountryScreen = () => {
                     </Text>
                 </TouchableOpacity>
             </View>
-            <Text>{result}</Text> {/* Display the result */}
+            <Text>{result}</Text>
         </View>
     )
 };
