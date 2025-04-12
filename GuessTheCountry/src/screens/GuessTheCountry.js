@@ -6,6 +6,7 @@ const GuessTheCountryScreen = () => {
     const [answer, setAnswer] = useState('');
     const [index, setIndex] = useState();
     const [result, setResult] = useState('');
+    const [score, setScore] = useState(0);
 
     const randomIndex = () => {
         const pickRandomIndex = Math.floor(Math.random() * countryList.length);
@@ -15,6 +16,7 @@ const GuessTheCountryScreen = () => {
     const checkAnswer = () => {
         if (answer.toLowerCase() === countryList[index]) {
             setResult('true');
+            setScore(score + 10);
         } else {
             setResult('false');
         }
@@ -95,6 +97,23 @@ const GuessTheCountryScreen = () => {
                 </TouchableOpacity>
             </View>
             <Text>{result}</Text>
+            <View
+                style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: 16
+                }}>
+                <View
+                    style={{
+                        borderWidth: 1,
+                        padding: 8,
+                        alignItems: 'center',
+                        backgroundColor: 'mistyrose',
+                        borderRadius: 20
+                    }}>
+                    <Text>Score : {score}</Text>
+                </View>
+            </View>
         </View>
     )
 };

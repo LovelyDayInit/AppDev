@@ -5,8 +5,6 @@ import GuessTheCountryScreen from './src/screens/GuessTheCountry';
 import WinScreen from './src/screens/WinScreen';
 import MainNavigator from './src/navigator/MainNavigator';
 
-
-
 const App = () => {
   return (
     <SafeAreaProvider>
