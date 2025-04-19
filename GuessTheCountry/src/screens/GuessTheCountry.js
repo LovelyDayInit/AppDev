@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import { countryList, objectImageList, objectNameList } from '../../data/Data';
 
-const GuessTheCountryScreen = () => {
+const GuessTheCountryScreen = ({navigation}) => {
     const [answer, setAnswer] = useState('');
     const [index, setIndex] = useState();
     const [result, setResult] = useState('');
@@ -29,7 +29,13 @@ const GuessTheCountryScreen = () => {
 
     useEffect(() => {
         randomIndex();
-    }, []); // <-- Added dependency array to run only once on mount
+    }, []);
+
+    useEffect(() => {
+        if (score === 20) {
+            navigation.navigate('Win');
+        }
+    }, [score]);
 
     return (
         <View style={{
